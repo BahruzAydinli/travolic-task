@@ -2,14 +2,14 @@ import React, { useEffect } from "react";
 import { Form, Row, Col, Input, Select, DatePicker, Button } from "antd";
 import { connect } from "react-redux";
 import { useForm } from "antd/lib/form/Form";
-import { addToDo, editToDo, resetForm } from "./../redux/actions";
+import { addToDo, editToDo, resetForm } from "../redux/actions";
 import moment from "moment";
 const { Option } = Select;
 const { TextArea } = Input;
 
 const rules = [{ required: true, message: "Field is required" }];
 
-const TodoCreate = (props) => {
+const Create = (props) => {
   const [form] = useForm();
 
   useEffect(() => {
@@ -117,5 +117,5 @@ const mapStateToProps = ({ options, todoForm }) => {
 };
 
 export default connect(mapStateToProps, { addToDo, editToDo, resetForm })(
-  TodoCreate
+  Create
 );

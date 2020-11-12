@@ -12,7 +12,7 @@ import {
   SortAscendingOutlined,
   SortDescendingOutlined,
 } from "@ant-design/icons";
-import { changeStatus, setEditToDo, deleteToDo } from "./../redux/actions";
+import { changeStatus, setEditToDo, deleteToDo } from "../redux/actions";
 import moment from "moment";
 
 const colors = {
@@ -21,7 +21,7 @@ const colors = {
   Low: "#00ff59",
 };
 
-const TodosList = (props) => {
+const View = (props) => {
   const [sortKey, setSortKey] = useState("no");
   const [order, setOrder] = useState("asc");
 
@@ -252,4 +252,4 @@ export default connect(mapStateToProps, {
   changeStatus,
   setEditToDo,
   deleteToDo,
-})(TodosList);
+})(View);

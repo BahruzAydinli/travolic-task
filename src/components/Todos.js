@@ -1,13 +1,14 @@
+import { List } from "antd/lib/form/Form";
 import React from "react";
-import TodoCreate from "./TodoCreate";
-import TodosList from "./TodosList";
+import Create from "./Create";
+import View from "./View";
 
 const Todos = () => {
   return (
     <>
-      <TodoCreate />
+      <Create />
       <div className="mt-10">
-        <TodosList />
+        <View />
       </div>
     </>
   );
